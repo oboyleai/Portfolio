@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidan O'Boyle - Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <p class="brand">Aidan O'Boyle</p>
+            <a class="menu-button" id="menu-button">
+                <span></span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="menu-container">
+        <div class="overlay"></div>
+        <ul>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/oboyleaidan" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/oboyleai" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <header id="welcome-section">
+        <div class="forest"></div>
+        <div class="silhouette"></div>
+        <div class="moon"></div>
+        <div class="container">
+            <h1>
+                <span class="line">Software Engineer</span>
+                <span class="line">& Developer</span>
+                <span class="color">&</span>
+                <span class="line">Problem Solver</span>
+            </h1>
+            <div class="buttons">
+                <a href="#projects" class="cta">View My Work</a>
+                <a href="#contact" class="cta">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="wrapper">
+            <div class="title">
+                <h3>Who am I?</h3>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="desc full">
+                <p>I'm a Computer Science student at the University of Michigan, passionate about developing innovative software solutions. Currently working as a Software Engineer Intern at Kolab, I specialize in building interactive 3D product models and implementing dynamic features using Unity and C#.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="desc">
+                    <h4>My technical expertise includes:</h4>
+                    <p>• Full-stack development using Python, JavaScript, React, Flask, and SQL</p>
+                    <p>• Machine Learning and AI with TensorFlow and PyTorch</p>
+                    <p>• Game Development with Unity and C#</p>
+                    <p>• Cloud services including AWS and Azure</p>
+                </div>
+                
+                <div class="desc">
+                    <h4>Beyond coding, I'm an active member of:</h4>
+                    <p>• Club Triathlon team</p>
+                    <p>• Michigan Hackers</p>
+                    <p>• Alpha Phi Omega</p>
+                    <p>• Michigan Ski Club</p>
+                    <p>• Michigan Golf Club</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="projects-container">
+            <div class="heading">
+                <h3 class="title">My Work</h3>
+                <div class="separator"></div>
+                <p class="subtitle">Here are some of my recent projects</p>
+            </div>
+            <div class="project">
+                <a href="#" class="project-link">
+                    <img class="project-image" src="/api/placeholder/400/400" alt="Instagram Clone">
+                </a>
+                <div class="project-details">
+                    <h4 class="project-tile">Instagram Clone</h4>
+                    <p class="icons">
+                        <i class="fab fa-python"></i>
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-react"></i>
+                    </p>
+                    <p>A full-stack Instagram-like web application featuring dynamic pages, REST API, and real-time updates.</p>
+                    <div class="buttons">
+                        <a href="#" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" target="_blank">Source Code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects following the same structure -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="heading-wrapper">
+                <div class="heading">
+                    <h3 class="title">Let's Connect</h3>
+                    <div class="separator"></div>
+                    <p class="subtitle">Send me a message!</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/oboyleaidan" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/oboyleai" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <form id="contact-form" action="#">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <textarea placeholder="Message" name="message" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+            <h3>THANKS FOR VISITING</h3>
+            <p>© 2024 Aidan O'Boyle. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
