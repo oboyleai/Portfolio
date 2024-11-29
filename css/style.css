@@ -632,8 +632,11 @@ a:active {
     background: #fafafa;
     clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 98%, 80% 100%, 0 98%);
     z-index: 5;
-    background: #fafafa url(./Images/Chill_guy.avif) center right no-repeat;
+  /* https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Author_BG.jpg */
+    background: #fafafa url(../Images/Chill_guy.avif) center right no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    filter: grayscale(75%);
     margin: 0;
     padding: 0;
 }
