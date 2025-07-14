@@ -1,25 +1,48 @@
-// Save this as script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.getElementById('menu-button');
-    const menuContainer = document.querySelector('.menu-container');
-    
-    menuButton.addEventListener('click', function() {
-        menuButton.classList.toggle('active');
-        menuContainer.classList.toggle('active');
-        
-        if (!menuContainer.classList.contains('active')) {
-            menuContainer.classList.add('deactive');
-            setTimeout(() => {
-                menuContainer.classList.remove('deactive');
-            }, 600);
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
+});
 
-    // Close menu when clicking menu items
-    document.querySelectorAll('.menu-container ul li a').forEach(item => {
-        item.addEventListener('click', function() {
-            menuButton.classList.remove('active');
-            menuContainer.classList.remove('active');
-        });
+// Add scroll effect to navigation
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) {
+        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+    } else {
+        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+        nav.style.boxShadow = 'none';
+    }
+});
+
+// Animate elements on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
     });
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
 });
