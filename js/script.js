@@ -287,10 +287,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typewriterElement) {
         const texts = [
             'Software Engineer',
-            'Full-Stack Developer', 
+            'Full-Stack Developer',
+            'Machine Learning Engineer',
+            'UX/UI Designer',
+            'Entrepreneur',
             'Problem Solver',
-            'Unity Developer',
-            'Machine Learning Enthusiast'
+            
         ];
         new TypewriterEffect(typewriterElement, texts, 150);
     }
