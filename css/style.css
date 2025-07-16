@@ -327,17 +327,33 @@ section {
   pointer-events: none;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
+/* Updated About Section Styles */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.about-text {
+.about-main {
   font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-light);
+}
+
+.about-main p {
+  margin-bottom: 1.5rem;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .location-card, .education-card {
@@ -374,6 +390,35 @@ section {
   color: var(--text-dark);
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+.activities-section h3 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.activity-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--primary-purple);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.activity-tag:hover {
+  background: var(--primary-purple);
+  color: var(--white);
+  transform: translateY(-2px);
 }
 
 /* Experience Section */
@@ -799,9 +844,12 @@ footer {
       font-size: 1.4rem;
   }
 
-  .about-grid {
+  .info-cards {
       grid-template-columns: 1fr;
-      gap: 3rem;
+  }
+  
+  .activities-grid {
+      justify-content: center;
   }
 
   .experience-item {
